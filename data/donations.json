@@ -1,0 +1,48 @@
+
+[
+    {
+        "donation_id": "D001",
+        "donor_name": "Campus Cafe",
+        "food_type": "prepared_meal",
+        "quantity": 25,
+        "shelf_life_minutes": 120,
+        "pickup_area": "Fullerton",
+        "ready_time": "14:00"
+    },
+    {
+        "donation_id": "D002",
+        "donor_name": "Local Bakery",
+        "food_type": "baked_goods",
+        "quantity": 40,
+        "shelf_life_minutes": 360,
+        "pickup_area": "Anaheim",
+        "ready_time": "13:30"
+    },
+    {
+        "donation_id": "D003",
+        "donor_name": "Fresh Market",
+        "food_type": "produce",
+        "quantity": 30,
+        "shelf_life_minutes": 60,
+        "pickup_area": "Fullerton",
+        "ready_time": "14:15"
+    },
+    {
+        "donation_id": "D004",
+        "donor_name": "Pizza Shop",
+        "food_type": "prepared_meal",
+        "quantity": 15,
+        "shelf_life_minutes": 45,
+        "pickup_area": "Brea",
+        "ready_time": "14:30"
+    },
+    {
+        "donation_id": "D005",
+        "donor_name": "Grocery Store",
+        "food_type": "produce",
+        "quantity": 50,
+        "shelf_life_minutes": 180,
+        "pickup_area": "Anaheim",
+        "ready_time": "13:45"
+    }
+]

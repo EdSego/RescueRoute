@@ -1,0 +1,43 @@
+[
+    {
+        "recipient_id": "R-001",
+        "organization_name": "Fullerton Food Shelter",
+        "accepted_food_types": ["produce", "prepared_meal"],
+        "capacity": "15",
+        "area": "Fullerton",
+        "closing_time": "19:00"
+    },
+    {
+        "recipient_id": "R-002",
+        "organization_name": "Anaheim Food Shelter",
+        "accepted_food_types": ["produce", "baked_goods"],
+        "capacity": "25",
+        "area": "Anaheim",
+        "closing_time": "20:00"
+    },
+    {
+        "recipient_id": "R-003",
+        "organization_name": "Fullerton Church",
+        "accepted_food_types": ["baked_goods","produce"],
+        "capacity": "30",
+        "area": "Fullerton",
+        "closing_time": "18:30"
+    },
+    {
+        "recipient_id": "R-004",
+        "organization_name": "Brea Food Shelter",
+        "accepted_food_types": ["prepared_meal","baked_goods"],
+        "capacity": "20",
+        "area": "Brea",
+        "closing_time": "19:30"
+    },
+    {
+        "recipient_id": "R-005",
+        "organization_name": "LA Food Shelter",
+        "accepted_food_types": ["prepared_meal","baked_goods","produce"],
+        "capacity": "40",
+        "area": "LA",
+        "closing_time": "20:30"
+    }
+
+]
