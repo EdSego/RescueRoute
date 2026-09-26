@@ -1,42 +1,42 @@
 [
     {
         "volunteer_id": "V-001",
-        "vehicle_capacity": 20,
+        "vehicle_capacity": 25,
         "area": "Fullerton",
         "available_from": "13:00",
         "available_until": "18:00",
-        "maximum_pickups": "2"
+        "maximum_pickups": 2
     },
     {
         "volunteer_id": "V-002",
-        "vehicle_capacity": "15",
+        "vehicle_capacity": 15,
         "area": "Brea",
         "available_from": "14:00",
         "available_until": "18:00",
-        "maximum_pickups": "1"
+        "maximum_pickups": 1
     },
     {
         "volunteer_id": "V-003",
-        "vehicle_capacity": "25",
-        "area": "Anahiem",
+        "vehicle_capacity": 25,
+        "area": "Anaheim",
         "available_from": "11:00",
         "available_until": "19:00",
-        "maximum_pickups": "3"
+        "maximum_pickups": 3
     },
     {
         "volunteer_id": "V-004",
-        "vehicle_capacity": "10",
+        "vehicle_capacity": 10,
         "area": "Fullerton",
         "available_from": "12:00",
         "available_until": "14:00",
-        "maximum_pickups": "1"
+        "maximum_pickups": 1
     },
     {
         "volunteer_id": "V-005",
-        "vehicle_capacity": "20",
+        "vehicle_capacity": 20,
         "area": "Brea",
         "available_from": "14:00",
         "available_until": "20:00",
-        "maximum_pickups": "2"
+        "maximum_pickups": 2
     }
 ]
