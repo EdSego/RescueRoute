@@ -12,6 +12,6 @@ def recipient_is_compatible(donation, reciptient):
     if donation['pickup_area'] != reciptient['area']:
         return False, "Recipient is not in the area"
     #Check 4 Closing Time:
-    if ['ready_minutes'] >= reciptient['closing_minutes']:
+    if donation['ready_minutes'] >= reciptient['closing_minutes']:
         return False, "Recipient closes before the donation is ready."
     return True, "Recipient is compatible"
