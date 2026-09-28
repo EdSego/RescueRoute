@@ -1,6 +1,7 @@
-from data_loader import load_file
+from data_loader import load_file, save_file
 import validations
 import matching
+import fifo
 
 def main():
     print("Welcome to RescueRoute")
@@ -43,6 +44,16 @@ def main():
     print("-"*20)
     print(f"\nIs the recipient compatible?: {result}")
     print(f"Reason: {reason}\n")
+
+    # FIFO Scheduling: donations handled in the order they were submitted
+    fifo_history = fifo.fifo_schedule(donations, recipients, volunteers)
+
+    print("\nFIFO Schedule")
+    print("-"*20)
+    for record in fifo_history:
+        print(f"[{record['status'].upper()}] {record['reason']}\n")
+
+    save_file("data/assignments.json", fifo_history)
 
 if __name__ == "__main__":
     main()
