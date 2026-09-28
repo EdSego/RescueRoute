@@ -46,20 +46,14 @@ def main():
     print(f"Reason: {reason}\n")
 
     # FIFO Scheduling: donations handled in the order they were submitted
-    assignments, unassigned = fifo.fifo_schedule(donations, recipients, volunteers)
+    fifo_history = fifo.fifo_schedule(donations, recipients, volunteers)
 
-    print("\nFIFO Assignments")
+    print("\nFIFO Schedule")
     print("-"*20)
-    for assignment in assignments:
-        print(f"Donation: {assignment['donation_id']} -> Recipient: {assignment['recipient_id']} "
-              f"| Volunteer: {assignment['volunteer_id']} | Pickup: {assignment['pickup_time']}")
+    for record in fifo_history:
+        print(f"[{record['status'].upper()}] {record['reason']}\n")
 
-    print("\nUnassigned Donations")
-    print("-"*20)
-    for item in unassigned:
-        print(f"Donation: {item['donation_id']} | Reason: {item['reason']}")
-
-    save_file("data/assignments.json", assignments)
+    save_file("data/assignments.json", fifo_history)
 
 if __name__ == "__main__":
     main()
