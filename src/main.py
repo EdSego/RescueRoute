@@ -2,6 +2,7 @@ from data_loader import load_file, save_file
 import validations
 import matching
 import fifo
+import greedy
 
 def main():
     print("Welcome to RescueRoute")
@@ -54,6 +55,19 @@ def main():
         print(f"[{record['status'].upper()}] {record['reason']}\n")
 
     save_file("data/assignments.json", fifo_history)
+
+    #Greedy Testing
+    test_greedy_donation = donations[0]
+    remaining = greedy.expiration_time_remaining(test_greedy_donation)
+    print(f"Donation ID: {donation['donation_id']}\nRemaining time: {remaining}") 
+
+    queue = greedy.put_into_deque(donations)
+
+    for queued_donation in queue:
+     print(
+        queued_donation["donation_id"],
+        greedy.expiration_time_remaining(queued_donation)
+        )
 
 if __name__ == "__main__":
     main()
