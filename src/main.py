@@ -57,17 +57,24 @@ def main():
     save_file("data/assignments.json", fifo_history)
 
     #Greedy Testing
-    test_greedy_donation = donations[0]
-    remaining = greedy.expiration_time_remaining(test_greedy_donation)
-    print(f"Donation ID: {donation['donation_id']}\nRemaining time: {remaining}") 
+    # test_greedy_donation = donations[0]
+    # remaining = greedy.expiration_time_remaining(test_greedy_donation)
+    # print(f"Donation ID: {donation['donation_id']}\nRemaining time: {remaining}") 
 
-    queue = greedy.put_into_deque(donations)
+    # queue = greedy.put_into_deque(donations)
 
-    for queued_donation in queue:
-     print(
-        queued_donation["donation_id"],
-        greedy.expiration_time_remaining(queued_donation)
-        )
+    # for queued_donation in queue:
+    #     print(
+    #     queued_donation["donation_id"],
+    #     greedy.expiration_time_remaining(queued_donation)
+    #     )
+
+
+    greedy_history = greedy.greedy_schedule(donations,recipients,volunteers)
+    print("\nGreedy Schedule")
+    print("-"*20)
+    for greedy_record in greedy_history:
+        print(f"[{greedy_record['status'].upper()}] {greedy_record['reason']}\n")
 
 if __name__ == "__main__":
     main()
