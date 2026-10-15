@@ -3,6 +3,7 @@ import validations
 import matching
 import fifo
 import greedy
+import metrics
 
 def main():
     print("Welcome to RescueRoute")
@@ -75,6 +76,36 @@ def main():
     print("-"*20)
     for greedy_record in greedy_history:
         print(f"[{greedy_record['status'].upper()}] {greedy_record['reason']}\n")
+
+    fifo_metrics = metrics.calculate_metrics(fifo_history,donations,recipients,volunteers)
+    greedy_metrics = metrics.calculate_metrics(greedy_history,donations,recipients,volunteers)
+
+    # print("-"*20)
+    # print("\nFifo Metrics",fifo_metrics)
+    # print("\nGreedy Metrics",greedy_metrics)
+
+    print("\n" + "=" * 60)
+    print("RESCUEROUTE - METRICS".center(60))
+    print("=" * 60)
+
+    print(f"{'Metric':<30}{'FIFO':>15}{'Greedy':>15}")
+    print("-" * 60)
+
+    for key in fifo_metrics:
+        fifo_value = fifo_metrics[key]
+        greedy_value = greedy_metrics[key]
+
+        if key in (
+            'urgent_rescue_rate',
+            'recipient_utilization',
+            'volunteer_utilization'
+        ):
+            fifo_value = f"{fifo_value:.2f}%"
+            greedy_value = f"{greedy_value:.2f}%"
+        label = key.replace("_"," ").title()
+        print(f"{label:<30}{fifo_value:>15}{greedy_value:>15}")
+    print("\n" + "=" * 60 + "\n")
+
 
 if __name__ == "__main__":
     main()
