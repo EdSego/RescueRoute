@@ -80,10 +80,6 @@ def main():
     fifo_metrics = metrics.calculate_metrics(fifo_history,donations,recipients,volunteers)
     greedy_metrics = metrics.calculate_metrics(greedy_history,donations,recipients,volunteers)
 
-    # print("-"*20)
-    # print("\nFifo Metrics",fifo_metrics)
-    # print("\nGreedy Metrics",greedy_metrics)
-
     print("\n" + "=" * 60)
     print("RESCUEROUTE - METRICS".center(60))
     print("=" * 60)
