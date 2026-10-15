@@ -25,10 +25,11 @@ def put_into_deque(donations):
     queue = deque(sorted_donations)
     return queue
 
-# Precondition: donations, recipients, volunteers are validated/prepared lists
-# Postcondition: donations are processed First In First Out (the order they were
-# submitted). Each donation goes to the first compatible recipient and the first
-# compatible volunteer. Returns the assignment history, one record per donation.
+# Precondition: donations, recipients, volunteers are validated/prepared lists.
+# Postcondition: donations are processed by greedy urgency priority.
+# Donations with the least remaining shelf life are processed first.
+# If tied, donations with earlier ready times are processed first.
+# Returns the assignment history, one record per donation.
 # Input lists are not modified.
 def greedy_schedule(donations,recipients, volunteers):
     # Get donations sorted by greedy priority
