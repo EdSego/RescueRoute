@@ -95,7 +95,7 @@ def compare_schedules(fifo_metrics,greedy_metrics,fifo_history,greedy_history):
     for record in fifo_history:
         if record['status'] == 'assigned':
             fifo_assigned.add(record['donation_id'])
-        # Collect donation IDs successfully assigned by Greedy.
+    # Collect donation IDs successfully assigned by Greedy.
     for record in greedy_history:
         if record['status'] == 'assigned':
             greedy_assigned.add(record['donation_id'])
