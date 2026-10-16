@@ -22,7 +22,7 @@
         "donation_id": "D-003",
         "donor_name": "Fresh Market",
         "food_type": "produce",
-        "quantity": 30,
+        "quantity": 20,
         "expiration_time": "15:15",
         "pickup_area": "Fullerton",
         "ready_time": "14:15"

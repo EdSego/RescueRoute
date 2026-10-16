@@ -102,6 +102,16 @@ def main():
         print(f"{label:<30}{fifo_value:>15}{greedy_value:>15}")
     print("\n" + "=" * 60 + "\n")
 
+    print("\nFIFO Assigned Donations:")
+    for record in fifo_history:
+        if record['status'] == 'assigned':
+            print(record['donation_id'])
+
+    print("\nGreedy Assigned Donations:")
+    for record in greedy_history:
+        if record['status'] == 'assigned':
+            print(record['donation_id'])
+
 
 if __name__ == "__main__":
     main()

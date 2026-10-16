@@ -21,10 +21,10 @@
         "donation_id": "D-003",
         "recipient_id": null,
         "volunteer_id": null,
-        "quantity": 30,
+        "quantity": 20,
         "scheduled_time": null,
         "status": "unassigned",
-        "reason": "Donation D-003 (30 produce from Fresh Market) could not be assigned because Fullerton Church (R-003) could take it, but no volunteer could pick it up. Checked: V-001: Not enough vehicle capacity; V-002: Volunteer is not in the area; V-003: Volunteer is not in the area; V-004: Not enough vehicle capacity; V-005: Volunteer is not in the area."
+        "reason": "Donation D-003 (20 produce from Fresh Market) could not be assigned because Fullerton Church (R-003) could take it, but no volunteer could pick it up. Checked: V-001: Not enough vehicle capacity; V-002: Volunteer is not in the area; V-003: Volunteer is not in the area; V-004: Not enough vehicle capacity; V-005: Volunteer is not in the area."
     },
     {
         "donation_id": "D-004",
