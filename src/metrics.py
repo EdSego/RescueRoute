@@ -68,3 +68,45 @@ def calculate_metrics(history, donations, recipients,volunteers):
         'recipient_utilization':recipient_utilization,
         'volunteer_utilization':volunteer_utilization
     }
+
+# Precondition: fifo_metrics and greedy_metrics contain the same
+# metric keys with numeric values. Both histories contain assignment
+# records with donation IDs and statues. 
+#
+# Postcondition: returns a dictionary containing the differences
+# between Greedy and Fifo metrics, along with the donation IDs.
+# assigned exclusively by FIFO, exclusively by Greedy, or by both. 
+def compare_schedules(fifo_metrics,greedy_metrics,fifo_history,greedy_history):
+    comparison = {}
+    
+    # Calculate the difference for each metric (Greedy - FIFO).
+    # A positive result means Greedy has a higher value.
+    for metric in fifo_metrics:
+        fifo_value = fifo_metrics[metric]
+        greedy_value = greedy_metrics[metric]
+
+        difference = greedy_value - fifo_value
+
+        comparison[metric] = difference
+    # Sets store unique donations IDs assigned by each algorithm.
+    fifo_assigned = set()
+    greedy_assigned = set()
+    # Collect donation IDs successfully assigned by FIFO.
+    for record in fifo_history:
+        if record['status'] == 'assigned':
+            fifo_assigned.add(record['donation_id'])
+    # Collect donation IDs successfully assigned by Greedy.
+    for record in greedy_history:
+        if record['status'] == 'assigned':
+            greedy_assigned.add(record['donation_id'])
+    # Set differences
+    fifo_only = fifo_assigned - greedy_assigned
+    greedy_only = greedy_assigned - fifo_assigned
+    # Set donations assigned by both
+    both = fifo_assigned & greedy_assigned
+    return {
+        'metric_differences':comparison,
+        'fifo_only':fifo_only,
+        'greedy_only':greedy_only,
+        'both':both
+    }
