@@ -1,47 +1,96 @@
-[
-    {
-        "donation_id": "D-001",
-        "recipient_id": "R-001",
-        "volunteer_id": "V-001",
-        "quantity": 25,
-        "scheduled_time": "14:00",
-        "status": "assigned",
-        "reason": "Donation D-001 (25 prepared_meals from Campus Cafe) was assigned to Fullerton Food Shelter (R-001) with volunteer V-001 at 14:00 because it expires 120 minutes after pickup, the recipient accepts prepared_meals and has 25 capacity left, and the volunteer can carry 25 (25 space left)."
-    },
-    {
-        "donation_id": "D-002",
-        "recipient_id": null,
-        "volunteer_id": null,
-        "quantity": 40,
-        "scheduled_time": null,
-        "status": "unassigned",
-        "reason": "Donation D-002 (40 baked_goods from Local Bakery) could not be assigned because no compatible recipient was found. Checked: R-001: Food Type not accepted; R-002: Not enough recipient capacity; R-003: Not enough recipient capacity; R-004: Not enough recipient capacity; R-005: Recipient is not in the area."
-    },
-    {
-        "donation_id": "D-003",
-        "recipient_id": null,
-        "volunteer_id": null,
-        "quantity": 20,
-        "scheduled_time": null,
-        "status": "unassigned",
-        "reason": "Donation D-003 (20 produce from Fresh Market) could not be assigned because Fullerton Church (R-003) could take it, but no volunteer could pick it up. Checked: V-001: Not enough vehicle capacity; V-002: Volunteer is not in the area; V-003: Volunteer is not in the area; V-004: Not enough vehicle capacity; V-005: Volunteer is not in the area."
-    },
-    {
-        "donation_id": "D-004",
-        "recipient_id": "R-004",
-        "volunteer_id": "V-002",
-        "quantity": 15,
-        "scheduled_time": "14:30",
-        "status": "assigned",
-        "reason": "Donation D-004 (15 prepared_meals from Pizza Shop) was assigned to Brea Food Shelter (R-004) with volunteer V-002 at 14:30 because it expires 45 minutes after pickup, the recipient accepts prepared_meals and has 20 capacity left, and the volunteer can carry 15 (15 space left)."
-    },
-    {
-        "donation_id": "D-005",
-        "recipient_id": null,
-        "volunteer_id": null,
-        "quantity": 50,
-        "scheduled_time": null,
-        "status": "unassigned",
-        "reason": "Donation D-005 (50 produce from Grocery Store) could not be assigned because no compatible recipient was found. Checked: R-001: Not enough recipient capacity; R-002: Not enough recipient capacity; R-003: Not enough recipient capacity; R-004: Food Type not accepted; R-005: Not enough recipient capacity."
-    }
-]
+{
+    "fifo": [
+        {
+            "donation_id": "D-001",
+            "recipient_id": "R-001",
+            "volunteer_id": "V-001",
+            "quantity": 25,
+            "scheduled_time": "14:00",
+            "status": "assigned",
+            "reason": "Donation D-001 (25 prepared_meals from Campus Cafe) was assigned to Fullerton Food Shelter (R-001) with volunteer V-001 at 14:00 because it expires 120 minutes after pickup, the recipient accepts prepared_meals and has 25 capacity left, and the volunteer can carry 25 (25 space left)."
+        },
+        {
+            "donation_id": "D-002",
+            "recipient_id": null,
+            "volunteer_id": null,
+            "quantity": 40,
+            "scheduled_time": null,
+            "status": "unassigned",
+            "reason": "Donation D-002 (40 baked_goods from Local Bakery) could not be assigned because no compatible recipient was found. Checked: R-001: Food Type not accepted; R-002: Not enough recipient capacity; R-003: Not enough recipient capacity; R-004: Not enough recipient capacity; R-005: Recipient is not in the area."
+        },
+        {
+            "donation_id": "D-003",
+            "recipient_id": null,
+            "volunteer_id": null,
+            "quantity": 20,
+            "scheduled_time": null,
+            "status": "unassigned",
+            "reason": "Donation D-003 (20 produce from Fresh Market) could not be assigned because Fullerton Church (R-003) could take it, but no volunteer could pick it up. Checked: V-001: Not enough vehicle capacity; V-002: Volunteer is not in the area; V-003: Volunteer is not in the area; V-004: Not enough vehicle capacity; V-005: Volunteer is not in the area."
+        },
+        {
+            "donation_id": "D-004",
+            "recipient_id": "R-004",
+            "volunteer_id": "V-002",
+            "quantity": 15,
+            "scheduled_time": "14:30",
+            "status": "assigned",
+            "reason": "Donation D-004 (15 prepared_meals from Pizza Shop) was assigned to Brea Food Shelter (R-004) with volunteer V-002 at 14:30 because it expires 45 minutes after pickup, the recipient accepts prepared_meals and has 20 capacity left, and the volunteer can carry 15 (15 space left)."
+        },
+        {
+            "donation_id": "D-005",
+            "recipient_id": null,
+            "volunteer_id": null,
+            "quantity": 50,
+            "scheduled_time": null,
+            "status": "unassigned",
+            "reason": "Donation D-005 (50 produce from Grocery Store) could not be assigned because no compatible recipient was found. Checked: R-001: Not enough recipient capacity; R-002: Not enough recipient capacity; R-003: Not enough recipient capacity; R-004: Food Type not accepted; R-005: Not enough recipient capacity."
+        }
+    ],
+    "greedy": [
+        {
+            "donation_id": "D-004",
+            "recipient_id": "R-004",
+            "volunteer_id": "V-002",
+            "quantity": 15,
+            "scheduled_time": "14:30",
+            "status": "assigned",
+            "reason": "Donation D-004 (15 prepared_meals from Pizza Shop) was assigned to Brea Food Shelter (R-004) with volunteer V-002 at 14:30 because it expires 45 minutes after pickup, the recipient accepts prepared_meals and has 20 capacity left, and the volunteer can carry 15 (15 space left)."
+        },
+        {
+            "donation_id": "D-003",
+            "recipient_id": "R-001",
+            "volunteer_id": "V-001",
+            "quantity": 20,
+            "scheduled_time": "14:15",
+            "status": "assigned",
+            "reason": "Donation D-003 (20 produce from Fresh Market) was assigned to Fullerton Food Shelter (R-001) with volunteer V-001 at 14:15 because it expires 60 minutes after pickup, the recipient accepts produce and has 25 capacity left, and the volunteer can carry 20 (25 space left)."
+        },
+        {
+            "donation_id": "D-001",
+            "recipient_id": null,
+            "volunteer_id": null,
+            "quantity": 25,
+            "scheduled_time": null,
+            "status": "unassigned",
+            "reason": "Donation D-001 (25 prepared_meals from Campus Cafe) could not be assigned because no compatible recipient was found. Checked: R-001: Not enough recipient capacity; R-002: Food Type not accepted; R-003: Food Type not accepted; R-004: Not enough recipient capacity; R-005: Recipient is not in the area."
+        },
+        {
+            "donation_id": "D-005",
+            "recipient_id": null,
+            "volunteer_id": null,
+            "quantity": 50,
+            "scheduled_time": null,
+            "status": "unassigned",
+            "reason": "Donation D-005 (50 produce from Grocery Store) could not be assigned because no compatible recipient was found. Checked: R-001: Not enough recipient capacity; R-002: Not enough recipient capacity; R-003: Not enough recipient capacity; R-004: Food Type not accepted; R-005: Not enough recipient capacity."
+        },
+        {
+            "donation_id": "D-002",
+            "recipient_id": null,
+            "volunteer_id": null,
+            "quantity": 40,
+            "scheduled_time": null,
+            "status": "unassigned",
+            "reason": "Donation D-002 (40 baked_goods from Local Bakery) could not be assigned because no compatible recipient was found. Checked: R-001: Food Type not accepted; R-002: Not enough recipient capacity; R-003: Not enough recipient capacity; R-004: Not enough recipient capacity; R-005: Recipient is not in the area."
+        }
+    ]
+}
