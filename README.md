@@ -63,6 +63,6 @@ compatible recipient
 
 ## Team Contributions
 Member | Files Worked On
-Bryan Vargas | validation.py, test_validations.py, test_greedy.py, test_helper.py
-Edwin Segovia | main.py, data_loader.py, matching.py, greedy.py, metrics.py
-Quoc Nguyen | fifo.py, scheduler.py, test_fifo.py
+- Bryan Vargas | validation.py, test_validations.py, test_greedy.py, test_helper.py
+- Edwin Segovia | main.py, data_loader.py, matching.py, greedy.py, metrics.py
+- Quoc Nguyen | fifo.py, scheduler.py, test_fifo.py
