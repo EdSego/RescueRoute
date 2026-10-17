@@ -16,7 +16,8 @@ For each donation, the program produces an assignment or an explanation as to wh
 match was found. It also calculates the outcome metrics to compare the two strategies.
 
 ## Architecture
-
+| File | Description |
+|------|-------------|
 | `main.py` | Loads data, runs both strategies, and displays results |
 | `data_loader.py` | Reads and saves JSON files |
 | `validations.py` | Validates and prepares input records |
