@@ -45,12 +45,24 @@ This approach prioritizes how long a donation lasts after it is ready, rather th
 what donation expires first on the clock. 
 
 ## Complexity
-
-
+D = number of donations, R = number of recipients, V = number of volunteers
+FIFO: O(D(R + V))
+Greedy: O(D log D + D(R + V))
 
 ## Limitations
 
+- Times are all within one day
+- Donations food type is a single type
+- Matching requires the same area
+- Volunteer vehicle capacity is consumed and not replenishable after delivery
+- Greedy does not guarantee a globally optimal result
+- Urgency priority can leave an earlier, less urgent donation unassigned 
+- Scheduler does not retry later recipients if no volunteer can serve the first
+compatible recipient
+
 
 ## Team Contributions
-
-Bryan Vargas | Data Files, Validations, Testing
+Member | Files Worked On
+Bryan Vargas | validation.py, test_validations.py, test_greedy.py, test_helper.py
+Edwin Segovia | main.py, data_loader.py, matching.py, greedy.py, metrics.py
+Quoc Nguyen | fifo.py, scheduler.py, test_fifo.py
